@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wee1 Task</title>
+    
+</head>
+<style>
+    body {
+        background-color: black;
+    }
+    form {
+        background-color: #c98b44;
+    }
+    legend {
+        color: #ffffff;
+        /* background-color: #e9c49b; */
+    }
+    input {
+        padding: 5px;
+    }
+    table {
+        border: 0;
+        text-align: left;
+        /* background-color: #e9c49b; */
+        width: 30%;
+    }
+    tr, th {
+        text-align: left;
+    }
+
+    h1 {
+        color: #ffffff;
+    }
+
+</style>
+
+<body>
+    
+    <h1>Fill in your BioData</h1>
+    <form action="form" method="*">
+        <fieldset>
+            <legend>BioData</legend>
+
+            <table cellspacing="5" cellpadding="5">
+                <tr>
+                    <th>
+                        <label for="fname">First Name:</label></th>
+                        <th><Input "type="text" name="firstname" id="firstname" placeholder="First Name">
+                    </th>
+
+                </tr>
+                
+                <tr>
+                    <th>
+                        <label for="lname">Surname Name:</label></th>
+                        <th><Input type="text" name="lasttname" id="lasttname" placeholder="Surname Name">
+
+                    </th>
+                </tr>
+
+                <tr>
+                    <th>
+                        <label for="E-mail">E-mail Address:</label></th>
+                        <th><Input type="email" name="email" id="email" placeholder="Enter Email">
+                    </th>
+                </tr>
+
+                <tr>
+                    <th>
+                        <label for="">Phone Number:</label></th>
+                        <th><Input type="text" id="Phone">
+                    </th>
+                </tr>
+
+                <tr>
+                    <th>
+                        <label for="gender">Gender:</label></th>
+                        <th><Input type="radio" name="male" id="gender">Male
+                        <Input type="radio" name="female" id="gender">Female
+                    </th>
+                </tr>
+
+                <tr>
+                    <th>
+                        <label for="password">Password:</label></th>
+                        <th><Input type="password" name="password" id="password" placeholder="Enter Password">
+                    </th>
+                </tr>
+
+                <tr>
+                    <th>
+                        <label for="button"></label>
+                    </th>
+                    <th>
+                        <button type="button" id="btn">Submit Form</button>
+                        
+                    </th>
+                </tr>
+                
+            </table>
+        </fieldset>
+
+    </form>
+    <script>
+        document.getElementById("btn").addEventListener("click", myFunction);
+
+        function myFunction() {
+            alert("Submitted Successfully")
+        }
+    </script>
+
+</body>
+
+</html>
