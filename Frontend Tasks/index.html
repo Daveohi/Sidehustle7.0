@@ -35,13 +35,28 @@
     h1 {
         color: #ffffff;
     }
+    /* #nameError {
+        display: none;
+        font-size: 0.8em;
+    }
+
+    #nameError.visible {
+        display: flex;
+    }
+    #nameError1.visible {
+        display: flex;
+    }
+
+    input.invalid {
+        border-color: red;
+    } */
 
 </style>
 
 <body>
     
     <h1>Fill in your BioData</h1>
-    <form action="form" method="*">
+    <form method="post">
         <fieldset>
             <legend>BioData</legend>
 
@@ -49,7 +64,8 @@
                 <tr>
                     <th>
                         <label for="fname">First Name:</label></th>
-                        <th><Input "type="text" name="firstname" id="firstname" placeholder="First Name">
+                        <th><input "type="text" name="fname" placeholder="Enter first name" required>
+                            <!-- <span role="alert" id="nameError" aria-hidden="true">Please enter First Name</span> -->
                     </th>
 
                 </tr>
@@ -57,7 +73,8 @@
                 <tr>
                     <th>
                         <label for="lname">Surname Name:</label></th>
-                        <th><Input type="text" name="lasttname" id="lasttname" placeholder="Surname Name">
+                        <th><input type="text" name="lname" placeholder="" required>
+                            <!-- <span role="alert" id="nameError1" aria-hidden="true">Please enter Surname Name</span> -->
 
                     </th>
                 </tr>
@@ -65,21 +82,21 @@
                 <tr>
                     <th>
                         <label for="E-mail">E-mail Address:</label></th>
-                        <th><Input type="email" name="email" id="email" placeholder="Enter Email">
+                        <th><input type="email" name="email" placeholder="Enter email Address" required>
                     </th>
                 </tr>
 
                 <tr>
                     <th>
                         <label for="">Phone Number:</label></th>
-                        <th><Input type="text" id="Phone">
+                        <th><input type="text" name="Phone" required>
                     </th>
                 </tr>
 
                 <tr>
                     <th>
                         <label for="gender">Gender:</label></th>
-                        <th><Input type="radio" name="male" id="gender">Male
+                        <th><input required type="radio" name="male" >Male
                         <Input type="radio" name="female" id="gender">Female
                     </th>
                 </tr>
@@ -87,16 +104,16 @@
                 <tr>
                     <th>
                         <label for="password">Password:</label></th>
-                        <th><Input type="password" name="password" id="password" placeholder="Enter Password">
+                        <th><input type="password" name="password" placeholder="Enter password" required/>
                     </th>
                 </tr>
 
                 <tr>
                     <th>
-                        <label for="button"></label>
+                        <label for="submit"></label>
                     </th>
                     <th>
-                        <button type="button" id="btn">Submit Form</button>
+                        <input type="submit" value="Submit" id="btn">
                         
                     </th>
                 </tr>
@@ -106,13 +123,45 @@
 
     </form>
     <script>
+        // function checkform(form)
+        // {
+        //     if(form.fname.value == "")
+        //     alert("Error: Input is empty!");
+        //     form.fname.focus()
+        //     return false;
+            
+
+        //     // if (form.password.value == "") {
+        //     //     alert("Enter password!");
+        //     //     form.password.focus()
+        //     //     return false;
+        //     // }
+        // }
+
+
+
+        // function validationForm() {
+        //     var x = document.form["myForm"]["fname"].value;
+        //     if (x == "" || x == null) {
+        //         alert("form not filled");
+        //         return false;
+        //     }
+            
+        // }
+
         document.getElementById("btn").addEventListener("click", myFunction);
 
-        function myFunction() {
-            alert("Submitted Successfully")
-        }
+            function myFunction() {
+                alert("Submitted Successfully");
+            }
+        
+
+
+        
     </script>
 
 </body>
 
 </html>
+
+// ["lname"]["email"]["phone"]["male"]["fmale"]["password"]
